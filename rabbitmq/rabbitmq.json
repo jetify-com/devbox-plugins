@@ -8,9 +8,11 @@
         "RABBITMQ_MNESIA_BASE": "{{.Virtenv}}/mnesia",
         "RABBITMQ_ENABLED_PLUGINS_FILE": "{{.DevboxDir}}/conf.d/enabled_plugins",
         "RABBITMQ_LOG_BASE": "{{.Virtenv}}/log",
+        "RABBITMQ_NODENAME": "rabbit",
         "RABBITMQ_PID_FILE": "{{.Virtenv}}/pid/$RABBITMQ_NODENAME.pid"
     },
     "create_files": {
-        "{{.DevboxDir}}/conf.d/rabbitmq.conf": "config/rabbitmq.conf"
+        "{{.DevboxDir}}/conf.d/rabbitmq.conf": "config/rabbitmq.conf",
+        "{{.Virtenv}}/process-compose.yaml": "config/process-compose.yaml"
     }
 }

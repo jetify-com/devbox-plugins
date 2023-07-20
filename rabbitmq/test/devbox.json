@@ -5,7 +5,8 @@
   ],
   "shell": {
     "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null"
+      ". .venv/bin/activate",
+      "pip install pika"
     ],
     "scripts": {
       "test": [

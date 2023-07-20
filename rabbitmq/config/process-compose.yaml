@@ -1,0 +1,15 @@
+version: "0.5"
+
+processes:
+  rabbitmq:
+    command: "rabbitmq-server"
+    availability:
+      restart: on_failure
+      max_restarts: 5
+    daemon: true
+    shutdown:
+      command: "rabbitmqctl shutdown"
+  rabbitmq-logs:
+    command: "tail -f $RABBITMQ_LOG_BASE/$RABBITMQ_NODENAME@$HOST.log"
+    availability:
+      restart: "always"
