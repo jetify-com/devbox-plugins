@@ -15,6 +15,6 @@
     }
   },
   "include": [
-    "path:./../rabbitmq.json"
+    "path:./../plugin.json"
   ]
 }

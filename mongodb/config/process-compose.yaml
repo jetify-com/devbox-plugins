@@ -1,0 +1,8 @@
+version: "0.5"
+
+processes:
+  mongodb:
+    command: "mongod --config=$MONGODB_CONFIG --dbpath=$MONGODB_DATA --bind_ip_all"
+    availability:
+      restart: on_failure
+      max_restarts: 5

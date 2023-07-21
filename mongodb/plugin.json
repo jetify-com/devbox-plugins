@@ -1,0 +1,15 @@
+{
+  "name": "mongodb",
+  "version": "0.0.1",
+  "match": "^mongodb-[0-9_]$",
+  "readme": "MongoDB plugin",
+  "env": {
+    "MONGODB_DATA": "{{.Virtenv}}/data",
+    "MONGODB_CONFIG": "{{.DevboxDir}}/mongod.conf"
+  },
+  "create_files": {
+    "{{.Virtenv}}/data": "",
+    "{{.Virtenv}}/process-compose.yaml": "config/process-compose.yaml",
+    "{{.DevboxDir}}/mongod.conf": "config/mongod.conf"
+  }
+}

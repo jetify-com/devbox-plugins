@@ -1,7 +1,9 @@
 {
     "name": "rabbitmq",
     "version": "0.0.1",
-    "match": "^rabbitmq-server$",
+    "packages": [
+        "rabbitmq-server@latest"
+    ],
     "readme": "RabbitMQ plugin",
     "env": {
         "RABBITMQ_CONFIG_FILES": "{{.DevboxDir}}/conf.d",

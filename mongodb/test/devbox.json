@@ -1,0 +1,12 @@
+{
+  "packages": [
+    "mongodb@latest",
+    "mongosh@latest"
+  ],
+  "shell": {
+    "init_hook": []
+  },
+  "include": [
+    "path:./../plugin.json"
+  ]
+}
