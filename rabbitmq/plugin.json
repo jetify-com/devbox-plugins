@@ -1,10 +1,7 @@
 {
     "name": "rabbitmq",
     "version": "0.0.1",
-    "packages": [
-        "rabbitmq-server@latest"
-    ],
-    "readme": "RabbitMQ plugin",
+    "readme": "Plugin for the RabbitMQ Server. This plugin sets several RABBITMQ environment variables to run an instance of RabbitMQ in your local project, adds a rabbitmq.conf file to the devbox.d directory, and configures a RabbitMQ service.",
     "env": {
         "RABBITMQ_CONFIG_FILES": "{{.DevboxDir}}/conf.d",
         "RABBITMQ_MNESIA_BASE": "{{.Virtenv}}/mnesia",
