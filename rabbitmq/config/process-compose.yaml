@@ -10,6 +10,6 @@ processes:
     shutdown:
       command: "rabbitmqctl shutdown"
   rabbitmq-logs:
-    command: "tail -f $RABBITMQ_LOG_BASE/$RABBITMQ_NODENAME@$HOST.log"
+    command: "tail -f $RABBITMQ_LOG_BASE/$RABBITMQ_NODENAME@$(hostname -s).log"
     availability:
       restart: "always"
