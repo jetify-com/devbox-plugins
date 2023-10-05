@@ -1,0 +1,65 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "nats-server@latest": {
+      "last_modified": "2023-09-27T18:02:17Z",
+      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#nats-server",
+      "source": "devbox-search",
+      "version": "2.10.1",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/gyh12bbfqd73r1zk423ifl3higqzjkka-nats-server-2.10.1"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/jsqsnyf6rmkyi82ggl0477r502xa8fff-nats-server-2.10.1"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/jiz3wyn0gb54z26833pb44m1699and02-nats-server-2.10.1"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/fc7qvw21bwdafw2clm9hv2mlx214wyfj-nats-server-2.10.1"
+        }
+      }
+    },
+    "nats-top@latest": {
+      "last_modified": "2023-09-27T18:02:17Z",
+      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#nats-top",
+      "source": "devbox-search",
+      "version": "0.6.1",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/is2y75xx1qvnys4fnmk0n87nlvkd8pmg-nats-top-0.6.1"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/7mybshs900pcaa7z7bsn4wgxpygy6svl-nats-top-0.6.1"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/90ydhlcp335zc343x0v152wnviw9phyy-nats-top-0.6.1"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/5x6zm0vi15a3w1wq7xbyr60a8mrip2ra-nats-top-0.6.1"
+        }
+      }
+    },
+    "natscli@latest": {
+      "last_modified": "2023-09-27T18:02:17Z",
+      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#natscli",
+      "source": "devbox-search",
+      "version": "0.1.1",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/wp934vnvgki955s246lz4dvxr10hp7g1-natscli-0.1.1"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/yf20wfxpf67rd1rl6wh6wrx8zvhr33yx-natscli-0.1.1"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/ql89nvmc5clw8ibvwhv7zfxlf21n6r86-natscli-0.1.1"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/dhgmf8j7g1piy3lq9d1fsxcbwmh9nfby-natscli-0.1.1"
+        }
+      }
+    }
+  }
+}

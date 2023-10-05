@@ -1,0 +1,13 @@
+version: "0.5"
+
+processes:
+  nats-server:
+    command: >
+      if [[ -z ${NATS_SERVER_CONF} ]]; then
+        nats-server
+      else
+        nats-server -c $NATS_SERVER_CONF
+      fi
+    availability:
+      restart: on_failure
+      max_restarts: 5
