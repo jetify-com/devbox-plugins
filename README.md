@@ -6,6 +6,7 @@ This repository includes plugins for configuring packages using Devbox.
 
 * MongoDB
 * RabbitMQ
+* NATS Server
 
 ## How to Use
 

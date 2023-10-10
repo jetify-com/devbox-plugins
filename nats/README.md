@@ -34,4 +34,4 @@ This plugin creates the following helper files:
 
 This plugin sets the following environment variables:
 
-* **NATS_SERVER_CONF** = {{.DevboxDir}}/mongod.conf
+* **NATS_SERVER_CONF** = {{.DevboxDir}}/server.conf
