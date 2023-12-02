@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetpack-io/devbox/jl/plugin-schema/.schema/devbox-plugin.schema.json",
+  "name": "tmux",
+  "version": "0.0.1",
+  "readme": "Plugin for tmux + tmuxPlugins. This adds an environment variable (DEVBOX_TMUX_PLUGINS) that makes it easy to add tmux plugins installed via Devbox to your tmux.conf",
+  "env": {
+    "DEVBOX_TMUX_PLUGINS": "{{ .DevboxProfileDefault }}/share/tmux-plugins/"
+  }
+}

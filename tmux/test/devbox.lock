@@ -1,0 +1,36 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "tmux@latest": {
+      "last_modified": "2022-06-07T02:20:12Z",
+      "resolved": "github:NixOS/nixpkgs/d23be02c22add83d28588ac164dcbac733305b04#tmux",
+      "source": "devbox-search",
+      "version": "3.3",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/5cjql2qsrry8py5nxbc582v6ygplyq15-tmux-3.3"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/d3w6mamrvhfklcqpdqzaxs2w0crf04i8-tmux-3.3"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/gsv76cwg8ss0inizmjnfwgwkyxzpwgzl-tmux-3.3"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/qr266qpqrlfzm39ak93dx7h8iwnndmk2-tmux-3.3"
+        }
+      }
+    },
+    "tmuxPlugins.nord@latest": {
+      "last_modified": "2023-11-17T14:14:56Z",
+      "resolved": "github:NixOS/nixpkgs/a71323f68d4377d12c04a5410e214495ec598d4c#tmuxPlugins.nord",
+      "source": "devbox-search",
+      "version": "0.3.0",
+      "systems": {
+        "x86_64-linux": {
+          "store_path": "/nix/store/0inbx1svy470yqyp83c7jclgasgdr8mi-tmuxplugin-nord-0.3.0"
+        }
+      }
+    }
+  }
+}

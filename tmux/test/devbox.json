@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "tmux@latest",
+    "tmuxPlugins.nord@latest"
+  ],
+  "shell": {
+    "init_hook": "tmux -f tmux.conf"
+  },
+  "include": ["path:./../plugin.json"]
+}
