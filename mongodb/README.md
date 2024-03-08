@@ -27,7 +27,7 @@ This plugin creates the following helper files:
 
 * **devbox.d/mongodb/mongod.conf** - MongoDB configuration file
 * **.devbox/virtenv/mongodb/data** - empty directory for holding your mongodb database
-* **.devbox/virtenv/rabbitmq/process-compose.yaml** - Defines the process to start the MongoDB server
+* **.devbox/virtenv/mongodb/process-compose.yaml** - Defines the process to start the MongoDB server
 
 ## Environment Variables
 
