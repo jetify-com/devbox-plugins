@@ -1,18 +1,146 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "python311@latest": {
-      "last_modified": "2023-06-29T16:20:38Z",
-      "plugin_version": "0.0.1",
-      "resolved": "github:NixOS/nixpkgs/3c614fbc76fc152f3e1bc4b2263da6d90adf80fb#python311",
+    "python@latest": {
+      "last_modified": "2024-02-24T23:06:34Z",
+      "plugin_version": "0.0.3",
+      "resolved": "github:NixOS/nixpkgs/9a9dae8f6319600fa9aebde37f340975cab4b8c0#python312",
       "source": "devbox-search",
-      "version": "3.11.4"
+      "version": "3.12.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/15k5wj7q3psakinjs1czl6fdfghi5k6d-python3-3.12.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/15k5wj7q3psakinjs1czl6fdfghi5k6d-python3-3.12.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ks2j3hf91drxzbizlaiyxhbzcjbp015v-python3-3.12.2",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/lppmqy0nnf8yf7y28bhxpnigii5ygzkv-python3-3.12.2-debug"
+            }
+          ],
+          "store_path": "/nix/store/ks2j3hf91drxzbizlaiyxhbzcjbp015v-python3-3.12.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x69mapgywbfgg8p4fdqy76lg0h9gf2kj-python3-3.12.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x69mapgywbfgg8p4fdqy76lg0h9gf2kj-python3-3.12.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/n3jf1lkdfakxskzsm4nlhss8mdgmcqhc-python3-3.12.2",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/jhl7n5bmzpnrvbnr97ly23am5g2pm8yi-python3-3.12.2-debug"
+            }
+          ],
+          "store_path": "/nix/store/n3jf1lkdfakxskzsm4nlhss8mdgmcqhc-python3-3.12.2"
+        }
+      }
     },
     "rabbitmq-server@latest": {
-      "last_modified": "2023-06-29T16:20:38Z",
-      "resolved": "github:NixOS/nixpkgs/3c614fbc76fc152f3e1bc4b2263da6d90adf80fb#rabbitmq-server",
+      "last_modified": "2024-02-24T23:06:34Z",
+      "resolved": "github:NixOS/nixpkgs/9a9dae8f6319600fa9aebde37f340975cab4b8c0#rabbitmq-server",
       "source": "devbox-search",
-      "version": "3.12.0"
+      "version": "3.12.13",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/99mhxfbwywg1yzy3116jp4q1gnml5hqm-rabbitmq-server-3.12.13",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/0g5p30nymgg3bnzsff2c35n1vma4kg4h-rabbitmq-server-3.12.13-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/1ys2myvxsbxh1wrsk7fqyfzzcv1d2xzf-rabbitmq-server-3.12.13-doc"
+            }
+          ],
+          "store_path": "/nix/store/99mhxfbwywg1yzy3116jp4q1gnml5hqm-rabbitmq-server-3.12.13"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/vzwqjrbal5ck15dwdx8srwpx55rym4kd-rabbitmq-server-3.12.13",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/3469ml9pdwbg001n8k4pxzxz150q3xhy-rabbitmq-server-3.12.13-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/h0gp7a0xl3n9dxj7f9lsry7phxipn6wz-rabbitmq-server-3.12.13-doc"
+            }
+          ],
+          "store_path": "/nix/store/vzwqjrbal5ck15dwdx8srwpx55rym4kd-rabbitmq-server-3.12.13"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5psjrxhix6b0pkjgqingnb5f9zcjmyd4-rabbitmq-server-3.12.13",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/0yydf7nvfysrx4ikq3a624wn6mymyhc7-rabbitmq-server-3.12.13-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/2yc601wpxq6vym4hyvrj9zl1j91dh2rg-rabbitmq-server-3.12.13-doc"
+            }
+          ],
+          "store_path": "/nix/store/5psjrxhix6b0pkjgqingnb5f9zcjmyd4-rabbitmq-server-3.12.13"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/12xgln4y3wvnhf4rsjhsp6ni9ldcfzx4-rabbitmq-server-3.12.13",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/7p51wnlfzi02llkply5swpkvflv92ysc-rabbitmq-server-3.12.13-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/gsbl12pnmgvj1fiisam32yhfzlryd7v4-rabbitmq-server-3.12.13-doc"
+            }
+          ],
+          "store_path": "/nix/store/12xgln4y3wvnhf4rsjhsp6ni9ldcfzx4-rabbitmq-server-3.12.13"
+        }
+      }
     }
   }
 }

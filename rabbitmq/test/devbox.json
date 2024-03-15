@@ -1,20 +1,10 @@
 {
-  "packages": [
-    "rabbitmq-server@latest",
-    "python311@latest"
-  ],
+  "packages": ["python@latest"],
   "shell": {
-    "init_hook": [
-      ". .venv/bin/activate",
-      "pip install pika"
-    ],
+    "init_hook": [". .venv/bin/activate", "pip install pika"],
     "scripts": {
-      "test": [
-        "echo \"Error: no test specified\" && exit 1"
-      ]
+      "test": ["echo \"Error: no test specified\" && exit 1"]
     }
   },
-  "include": [
-    "path:./../plugin.json"
-  ]
+  "include": ["path:./../plugin.json"]
 }

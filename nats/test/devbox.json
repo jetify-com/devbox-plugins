@@ -1,13 +1,7 @@
 {
-  "packages": [
-    "nats-server@latest",
-    "natscli@latest",
-    "nats-top@latest"
-  ],
+  "packages": [],
   "shell": {
     "init_hook": []
   },
-  "include": [
-    "path:./../plugin.json"
-  ]
+  "include": ["path:./../plugin.json"]
 }

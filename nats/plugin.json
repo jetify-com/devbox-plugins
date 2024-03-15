@@ -1,6 +1,7 @@
 {
   "name": "nats-server",
-  "version": "0.0.1",
+  "packages": ["nats-server@latest", "natscli@latest", "nats-top@latest"],
+  "version": "0.0.2",
   "readme": "Plugin for the [`nats-server`](https://www.nixhub.io/packages/nats-server) package. This plugin configures nats-server to use a local config, and adds a process-compose service",
   "env": {
     "NATS_SERVER_CONF": "{{.DevboxDir}}/server.conf"

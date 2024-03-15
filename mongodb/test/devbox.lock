@@ -2,16 +2,100 @@
   "lockfile_version": "1",
   "packages": {
     "mongodb@latest": {
-      "last_modified": "2023-06-29T16:20:38Z",
-      "resolved": "github:NixOS/nixpkgs/3c614fbc76fc152f3e1bc4b2263da6d90adf80fb#mongodb",
+      "last_modified": "2024-02-29T18:14:35Z",
+      "resolved": "github:NixOS/nixpkgs/b5f6e3881acf8ca8a35b8cdb8d4021e5bd469a4e#mongodb",
       "source": "devbox-search",
-      "version": "6.0.6"
+      "version": "6.0.13",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/82api382f2rgg0318mxdb57nhgsin8p4-mongodb-6.0.13",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/82api382f2rgg0318mxdb57nhgsin8p4-mongodb-6.0.13"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gy5r04zx34y6h2nps5rmphc64184mhb3-mongodb-6.0.13",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gy5r04zx34y6h2nps5rmphc64184mhb3-mongodb-6.0.13"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g4bfy9i87vhps3njqik9yg44l6d9pbfy-mongodb-6.0.13",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/g4bfy9i87vhps3njqik9yg44l6d9pbfy-mongodb-6.0.13"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bd3g54zcg86r25h0iz0c6fcs16y3jf1l-mongodb-6.0.13",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bd3g54zcg86r25h0iz0c6fcs16y3jf1l-mongodb-6.0.13"
+        }
+      }
     },
     "mongosh@latest": {
-      "last_modified": "2023-06-29T16:20:38Z",
-      "resolved": "github:NixOS/nixpkgs/3c614fbc76fc152f3e1bc4b2263da6d90adf80fb#mongosh",
+      "last_modified": "2024-02-24T23:06:34Z",
+      "resolved": "github:NixOS/nixpkgs/9a9dae8f6319600fa9aebde37f340975cab4b8c0#mongosh",
       "source": "devbox-search",
-      "version": "1.9.1"
+      "version": "2.1.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1sgn5gdmlj6p5af0hiy98cazvxrh3d9c-mongosh-2.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1sgn5gdmlj6p5af0hiy98cazvxrh3d9c-mongosh-2.1.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3041c77ap77wqw58clbyyd3214ha9swm-mongosh-2.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3041c77ap77wqw58clbyyd3214ha9swm-mongosh-2.1.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9ckcmklgwr2isx0jf8gas88pd54mr8db-mongosh-2.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/9ckcmklgwr2isx0jf8gas88pd54mr8db-mongosh-2.1.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1bdzx4gizynvn15jbdlqcv7iisbvm3vk-mongosh-2.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1bdzx4gizynvn15jbdlqcv7iisbvm3vk-mongosh-2.1.5"
+        }
+      }
     }
   }
 }

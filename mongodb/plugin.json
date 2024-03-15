@@ -1,6 +1,7 @@
 {
   "name": "mongodb",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "packages": ["mongosh@latest", "mongodb@latest"],
   "readme": "Plugin for the [`mongodb`](https://www.nixhub.io/packages/mongodb) package. This plugin configures MonogoDB to use a local config file and data directory for this project, and configures a mongodb service.",
   "env": {
     "MONGODB_DATA": "{{.Virtenv}}/data",
