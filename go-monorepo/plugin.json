@@ -1,0 +1,43 @@
+{
+  "name": "go-monorepo",
+  "description": "Go monorepo plugin",
+  "packages": {
+    "go": "latest",
+    "golangci-lint": "latest",
+  },
+  "env": {
+    "GOENV": "off",
+  },
+  "shell": {
+    "init_hook": [
+      // Remove Go environment variables that might've been inherited from the
+      // user's environment and could affect the build.
+      "test -z $FISH_VERSION && \\",
+      "unset       CGO_ENABLED GO111MODULE GOARCH GOFLAGS GOMOD GOOS GOROOT GOTOOLCHAIN GOWORK || \\",
+      "set --erase CGO_ENABLED GO111MODULE GOARCH GOFLAGS GOMOD GOOS GOROOT GOTOOLCHAIN GOWORK",
+      // Shell function that evals its arguments inside each Go module in the
+      // workspace. For example, `for_each_gomod go test ./...` runs tests for
+      // every module.
+      "for_each_gomod() {",
+      "  pwd=\"$(pwd)\"",
+      "  for dir in $(go list -m -f '{{`{{.Dir}}`}}'); do",
+      "    echo \"$dir: $*\" && cd \"$dir\" && \"$@\"",
+      "  done",
+      "  cd \"$pwd\" || return",
+      "}"
+    ],
+    "scripts": {
+      "tidy": "bash {{.Virtenv}}/gotidy.sh",
+      "update": "bash {{.Virtenv}}/gotidy.sh -u",
+      "build": "for_each_gomod go build -v ./...",
+      // TODO: fmt and lint is not correctly running on all projects.
+      // Some projects need "devbox run fmt" and "devbox run lint".
+      "fmt": "for_each_gomod go fmt ./...",
+      "lint": "for_each_gomod golangci-lint run --timeout 300s",
+      "test": "for_each_gomod go test -race -cover -v ./...",
+    }
+  },
+  "create_files": {
+    "{{.Virtenv}}/gotidy.sh": "gotidy.sh",
+  }
+}
