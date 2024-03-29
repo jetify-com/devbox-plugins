@@ -4,6 +4,7 @@ This repository includes plugins for configuring packages using Devbox.
 
 ## Available Plugins
 
+* Go Monorepo (experimental)
 * MongoDB
 * RabbitMQ
 * NATS Server
