@@ -1,6 +1,8 @@
 #!/bin/bash
 # shellcheck shell=sh
 
+# Credit to @gcurtis for this script! 
+
 set -e
 
 if [ "$1" = "-h" ] || [ "$1" = "-help" ] || [ "$1" = "--help" ]; then
