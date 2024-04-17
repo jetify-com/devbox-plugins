@@ -52,10 +52,10 @@ cd "${repo}"
 go work use
 mods="$(go list -m -f "{{`{{.Dir}}`}}")"
 
-# Disable workspaces to ensure that each module builds successfully outside of
-# the workspace. This is important for Docker containers or mirrored open
-# source repos where the workspace won't exist.
-export GOWORK=off
+# TODO: Add a script that runs this with GOWORK=off to check that the modules
+# build with the workspace disabled. This is useful to ensure that the modules
+# are self-contained and don't rely on the workspace for dependencies.
+# export GOWORK=off
 
 # Update the Go version first, since that will influence how Go updates
 # dependencies and tidies the modules.
