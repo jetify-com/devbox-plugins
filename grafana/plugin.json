@@ -1,0 +1,23 @@
+{
+  "name": "grafana",
+  "version": "0.0.1",
+  "readme": "Plugin for grafana",
+  "env": {
+    "GRAFANA_DATA_DIR": "{{.Virtenv}}/lib",
+    "GRAFANA_LOG_DIR": "{{.Virtenv}}/log",
+    "GRAFANA_PLUGIN_DIR": "{{.DevboxDir}}/plugins",
+    "GRAFANA_HOMEPATH": "{{.Virtenv}}",
+    "GRAFANA_CONFIG_DIR": "{{.DevboxDir}}/conf",
+    "GRAFANA_PROVISIONING_DIR": "{{.Virtenv}}/conf/provisioning"
+  },
+  "create_files": {
+    "{{.DevboxDir}}/conf/defaults.ini": "config/defaults.ini",
+    "{{.Virtenv}}/process-compose.yaml": "config/process-compose.yaml"
+  },
+  "shell": {
+    "init_hook": [
+      "cp -rf $DEVBOX_PACKAGES_DIR/share/grafana/. {{.Virtenv}}/",
+      "chmod -R 777 {{.Virtenv}}"
+    ],
+  }
+}
