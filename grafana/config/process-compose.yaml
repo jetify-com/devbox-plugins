@@ -1,0 +1,11 @@
+version: "0.5"
+
+processes:
+  grafana:
+    command: |
+      grafana server \
+        --homepath=$GRAFANA_HOMEPATH \
+        -config=$GRAFANA_CONFIG_DIR/defaults.ini
+    log_location: $GRAFANA_LOG_DIR
+    availability:
+      restart: "always"
