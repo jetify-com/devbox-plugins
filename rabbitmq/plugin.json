@@ -8,7 +8,8 @@
         "RABBITMQ_ENABLED_PLUGINS_FILE": "{{.DevboxDir}}/conf.d/enabled_plugins",
         "RABBITMQ_LOG_BASE": "{{.Virtenv}}/log",
         "RABBITMQ_NODENAME": "rabbit",
-        "RABBITMQ_PID_FILE": "{{.Virtenv}}/pid/$RABBITMQ_NODENAME.pid"
+        "RABBITMQ_PID_FILE": "{{.Virtenv}}/pid/$RABBITMQ_NODENAME.pid",
+        "ELIXIR_ERL_OPTIONS": "+fnu"
     },
     "create_files": {
         "{{.DevboxDir}}/conf.d/rabbitmq.conf": "config/rabbitmq.conf",
