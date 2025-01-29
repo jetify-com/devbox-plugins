@@ -28,7 +28,7 @@
       "}"
     ],
     "scripts": {
-      "tidy": "bash {{.Virtenv}}/gotidy.sh",
+      "tidy": "bash {{.Virtenv}}/gotidy.sh $@",
       "update": "bash {{.Virtenv}}/gotidy.sh -u",
       "build": "for_each_gomod go build -v ./...",
       // TODO: fmt and lint is not correctly running on all projects.
