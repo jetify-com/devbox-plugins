@@ -6,7 +6,7 @@
 set -e
 
 if [ "$1" = "-h" ] || [ "$1" = "-help" ] || [ "$1" = "--help" ]; then
-	echo "usage: $0 [-u | -u direct | -u go]"
+	echo "usage: $0 [-u | -u direct | -u go | --build]"
 	echo
 	echo "gotidy tidies the go.mod files in the current repo and checks that each module"
 	echo "compiles independently of the workspace. If -u is set, it also updates the"
@@ -34,6 +34,8 @@ if [ "$1" = "-u" ]; then
 		exit 1
 		;;
 	esac
+elif [ "$1" = "--build" ]; then
+	build_flag=1
 elif [ "$1" != "" ]; then
 	echo "invalid flag \"$1\""
 	exit 1
@@ -115,17 +117,19 @@ for dir in ${mods}; do
 	echo "gotidy ${dir}: tidying go.mod"
 	go mod tidy
 
-	echo "gotidy ${dir}: downloading dependencies"
-	go mod download
+	if [ "${build_flag}" = 1 ]; then
+		echo "gotidy ${dir}: building module"
+		go build ./...
+
+		echo "gotidy ${dir}: downloading dependencies"
+		go mod download
+
+		echo "gotidy ${dir}: building module tests"
+		go test -c -o /dev/null ./...
+	fi
 
 	echo "gotidy ${dir}: formatting module"
 	go fmt ./...
-
-	echo "gotidy ${dir}: building module"
-	go build ./...
-
-	echo "gotidy ${dir}: building module tests"
-	go test -c -o /dev/null ./...
 done
 
 # Reenable the workspace to sync all of the modules' transitive
@@ -133,19 +137,22 @@ done
 export GOWORK=auto
 cd "${repo}"
 go work sync
-go mod download
 
-for dir in ${mods}; do
-	if ! cd "${dir}"; then
-		echo "$0: ${dir}: skipping directory"
-		continue
-	fi
+if [ "${build_flag}" = 1 ]; then
+	go mod download
+
+	for dir in ${mods}; do
+		if ! cd "${dir}"; then
+			echo "$0: ${dir}: skipping directory"
+			continue
+		fi
 
 	echo "gotidy ${dir}: building module"
 	go build ./...
 
-	echo "gotidy ${dir}: building module tests"
-	go test -c -o /dev/null ./...
-done
+		echo "gotidy ${dir}: building module tests"
+		go test -c -o /dev/null ./...
+	done
+fi
 
 git --no-pager diff --stat
