@@ -137,19 +137,22 @@ done
 export GOWORK=auto
 cd "${repo}"
 go work sync
-go mod download
 
-for dir in ${mods}; do
-	if ! cd "${dir}"; then
-		echo "$0: ${dir}: skipping directory"
-		continue
-	fi
+if [ "${build_flag}" = 1 ]; then
+	go mod download
+
+	for dir in ${mods}; do
+		if ! cd "${dir}"; then
+			echo "$0: ${dir}: skipping directory"
+			continue
+		fi
 
 	echo "gotidy ${dir}: building module"
 	go build ./...
 
-	echo "gotidy ${dir}: building module tests"
-	go test -c -o /dev/null ./...
-done
+		echo "gotidy ${dir}: building module tests"
+		go test -c -o /dev/null ./...
+	done
+fi
 
 git --no-pager diff --stat
