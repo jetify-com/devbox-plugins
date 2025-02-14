@@ -117,12 +117,12 @@ for dir in ${mods}; do
 	echo "gotidy ${dir}: tidying go.mod"
 	go mod tidy
 
+	echo "gotidy ${dir}: downloading dependencies"
+	go mod download
+
 	if [ "${build_flag}" = 1 ]; then
 		echo "gotidy ${dir}: building module"
 		go build ./...
-
-		echo "gotidy ${dir}: downloading dependencies"
-		go mod download
 
 		echo "gotidy ${dir}: building module tests"
 		go test -c -o /dev/null ./...
@@ -137,9 +137,9 @@ done
 export GOWORK=auto
 cd "${repo}"
 go work sync
+go mod download
 
 if [ "${build_flag}" = 1 ]; then
-	go mod download
 
 	for dir in ${mods}; do
 		if ! cd "${dir}"; then
