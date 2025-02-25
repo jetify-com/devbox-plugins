@@ -34,7 +34,7 @@
       // TODO: fmt and lint is not correctly running on all projects.
       // Some projects need "devbox run fmt" and "devbox run lint".
       "fmt": "find . -name '*.go' -not -path '*/gen/*' -exec gofumpt -w -l {} \\+",
-      "lint": "for_each_gomod golangci-lint run --timeout 300s",
+      "lint": "for_each_gomod golangci-lint run --timeout ${GOLANGCI_LINT_TIMEOUT:-600s}",
       "test": "for_each_gomod go test -race -cover -v ./...",
     }
   },
