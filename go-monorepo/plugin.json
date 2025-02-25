@@ -3,7 +3,7 @@
   "description": "Go monorepo plugin",
   "packages": {
     "go": "latest",
-    "golangci-lint": "latest",
+    "runx:golangci/golangci-lint": "latest",
     "runx:mvdan/gofumpt": "latest",
   },
   "env": {
