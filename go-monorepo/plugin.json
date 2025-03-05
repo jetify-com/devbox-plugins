@@ -8,6 +8,7 @@
   },
   "env": {
     "GOENV": "off",
+    "PATH": "{{ .Virtenv }}/bin/:$PATH",
   },
   "shell": {
     "init_hook": [
@@ -16,20 +17,11 @@
       "test -z $FISH_VERSION && \\",
       "unset       CGO_ENABLED GO111MODULE GOARCH GOFLAGS GOMOD GOOS GOROOT GOTOOLCHAIN GOWORK || \\",
       "set --erase CGO_ENABLED GO111MODULE GOARCH GOFLAGS GOMOD GOOS GOROOT GOTOOLCHAIN GOWORK",
-      // Shell function that evals its arguments inside each Go module in the
-      // workspace. For example, `for_each_gomod go test ./...` runs tests for
-      // every module.
-      "for_each_gomod() {",
-      "  pwd=\"$(pwd)\"",
-      "  for dir in $(go list -m -f '{{`{{.Dir}}`}}'); do",
-      "    echo \"$dir: $*\" && cd \"$dir\" && \"$@\"",
-      "  done",
-      "  cd \"$pwd\" || return",
-      "}"
+      
     ],
     "scripts": {
-      "tidy": "bash {{.Virtenv}}/gotidy.sh $@",
-      "update": "bash {{.Virtenv}}/gotidy.sh -u",
+      "tidy": "gotidy $@",
+      "update": "gotidy -u",
       "build": "for_each_gomod go build -v ./...",
       // TODO: fmt and lint is not correctly running on all projects.
       // Some projects need "devbox run fmt" and "devbox run lint".
@@ -39,6 +31,7 @@
     }
   },
   "create_files": {
-    "{{.Virtenv}}/gotidy.sh": "gotidy.sh",
+    "{{.Virtenv}}/bin/gotidy": "gotidy.sh",
+    "{{.Virtenv}}/bin/for_each_gomod": "for_each_gomod.sh"
   }
 }
