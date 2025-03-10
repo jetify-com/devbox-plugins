@@ -3,6 +3,6 @@
 # every module.
 pwd="$(pwd)"
 for dir in $(go list -m -f '{{`{{.Dir}}`}}'); do
-  echo "$dir: $*" && cd "$dir" && "$@"
+  echo "$dir: $*" && cd "$dir" && "$@" || exit $?
 done
 cd "$pwd" || return
