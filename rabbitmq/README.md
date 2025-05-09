@@ -32,7 +32,7 @@ This plugin creates the following helper files:
 
 This plugin sets the following environment variables:
 
-* **RABBITMQ_CONFIG_FILE** = {{.DevboxDir}}/conf.d
+* **RABBITMQ_CONFIG_FILES** = {{.DevboxDir}}/conf.d
 * **RABBITMQ_MNESIA_BASE** = {{.Virtenv}}/mnesia
 * **RABBITMQ_ENABLED_PLUGINS_FILE** = {{.DevboxDir}}/conf.d/enabled_plugins
 * **RABBITMQ_LOG_BASE** = {{.Virtenv}}/log
